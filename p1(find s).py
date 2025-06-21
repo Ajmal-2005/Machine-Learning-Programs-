@@ -8,8 +8,7 @@ def s_algorithm(examples):
                     hypothesis[i] = instances[i]
                 elif hypothesis[i] != instances[i]:
                     hypothesis[i] = '?'
-    print(hypothesis)
-    return 0
+    return hypothesis
 examples = [['Sunny', 'Warm', 'Normal', 'Strong', 'Warm', 'Same', 'Yes'],
     ['Sunny', 'Warm', 'High', 'Strong', 'Warm', 'Same', 'Yes'],
     ['Rainy', 'Cold', 'High', 'Strong', 'Warm', 'Change', 'No'],

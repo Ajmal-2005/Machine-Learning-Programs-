@@ -1,0 +1,6 @@
+Make,Model,Year,Engine Fuel Type,Engine HP,Engine Cylinders,Transmission Type,Driven_Wheels,Number of Doors,Market Category,Vehicle Size,Vehicle Style,highway MPG,city mpg,Popularity,Price
+BMW,1 Series,2011,premium unleaded,230,6,AUTOMATIC,rear wheel drive,2,Luxury,Compact,Coupe,28,19,3916,30000
+Audi,A4,2012,premium unleaded,211,4,MANUAL,all wheel drive,4,"Luxury, Performance",Midsize,Sedan,30,22,3105,27000
+Ford,Fiesta,2015,regular unleaded,120,4,AUTOMATIC,front wheel drive,4,Economy,Compact,Sedan,36,28,2100,14000
+Toyota,Corolla,2017,regular unleaded,132,4,AUTOMATIC,front wheel drive,4,Compact,Compact,Sedan,35,27,2200,16000
+Honda,Civic,2016,regular unleaded,158,4,AUTOMATIC,front wheel drive,4,"Compact, Sporty",Compact,Sedan,40,31,2500,18000

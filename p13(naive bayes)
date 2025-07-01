@@ -1,0 +1,32 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import confusion_matrix, accuracy_score
+
+# Sample dataset (replace with your CSV for real use)
+data = pd.DataFrame({
+    'Age': [25, 45, 35, 33, 26, 58, 48, 29],
+    'Income': [30000, 60000, 50000, 52000, 35000, 80000, 62000, 40000],
+    'LoanAmount': [10000, 20000, 15000, 12000, 8000, 25000, 18000, 10000],
+    'CreditScore': [650, 700, 720, 680, 660, 750, 710, 640],
+    'Approved': ['No', 'Yes', 'Yes', 'Yes', 'No', 'Yes', 'Yes', 'No']
+})
+
+# Convert target to binary
+data['Approved'] = data['Approved'].map({'No': 0, 'Yes': 1})
+
+# Features and target
+X = data[['Age', 'Income', 'LoanAmount', 'CreditScore']]
+y = data['Approved']
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=0)
+
+# Train Naive Bayes
+model = GaussianNB()
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+
+# Results
+print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
+print("Accuracy:", accuracy_score(y_test, y_pred))
